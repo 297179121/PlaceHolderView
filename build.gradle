@@ -2,22 +2,22 @@
 
 buildscript {
     repositories {
-        jcenter()
+        maven { url "https://maven.aliyun.com/repository/public" }
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.0'
+        classpath 'com.android.tools.build:gradle:3.5.2'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
 
 allprojects {
     repositories {
-        jcenter()
+        maven { url "https://maven.aliyun.com/repository/public" }
         google()
     }
 }
@@ -29,9 +29,9 @@ task clean(type: Delete) {
 
 ext {
     // Library version
-    libCompileSdkVersion = 25
+    libCompileSdkVersion = 28
     libMinSdkVersion = 16
-    libTargetSdkVersion = 25
+    libTargetSdkVersion = 28
     libBuildToolsVersion = "27.0.3"
     libSupportVersion = '25.4.0'
     libPublishVersionCode = 22

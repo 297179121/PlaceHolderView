@@ -16,6 +16,7 @@
             android:id="@+id/rejectBtn"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:onClick="onRejectClick"
             android:background="@drawable/ic_cancel" />
 
         <ImageButton
@@ -23,6 +24,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="30dp"
+            android:onClick="onAcceptClick"
             android:background="@drawable/ic_heart" />
 
         <ImageButton
@@ -30,6 +32,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="30dp"
+            android:onClick="onUndoClick"
             android:background="@drawable/ic_book_black_18dp" />
     </LinearLayout>
 

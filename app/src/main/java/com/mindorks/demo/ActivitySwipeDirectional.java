@@ -1,13 +1,12 @@
 package com.mindorks.demo;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 
-import com.mindorks.butterknifelite.ButterKnifeLite;
-import com.mindorks.butterknifelite.annotations.BindView;
-import com.mindorks.butterknifelite.annotations.OnClick;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.mindorks.demo.swipe.TinderDirectionalCard;
 import com.mindorks.placeholderview.SwipeDecor;
 import com.mindorks.placeholderview.SwipeDirectionalView;
@@ -21,15 +20,13 @@ public class ActivitySwipeDirectional extends AppCompatActivity {
 
     private static final String TAG = "ActivityTinder";
 
-    @BindView(R.id.swipeView)
     private SwipeDirectionalView mSwipeView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tinder_directional_swipe);
-        ButterKnifeLite.bind(this);
-
+        mSwipeView = findViewById(R.id.swipeView);
     }
 
     @Override
@@ -77,18 +74,15 @@ public class ActivitySwipeDirectional extends AppCompatActivity {
                 .addView(new TinderDirectionalCard());
     }
 
-    @OnClick(R.id.rejectBtn)
-    private void onRejectClick() {
+    public void onRejectClick(View view) {
         mSwipeView.doSwipe(false);
     }
 
-    @OnClick(R.id.acceptBtn)
-    private void onAcceptClick() {
+    public void onAcceptClick(View view) {
         mSwipeView.doSwipe(true);
     }
 
-    @OnClick(R.id.undoBtn)
-    private void onUndoClick() {
+    public void onUndoClick(View view) {
         mSwipeView.undoLastSwipe();
     }
 }

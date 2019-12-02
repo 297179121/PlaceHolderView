@@ -10,12 +10,14 @@
         android:id="@+id/collapse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="onCollapse"
         android:text="Collapse Random" />
 
     <Button
         android:id="@+id/expand"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="onExpand"
         android:text="Expand Random" />
     <com.mindorks.placeholderview.ExpandablePlaceHolderView
         android:id="@+id/expandableView"

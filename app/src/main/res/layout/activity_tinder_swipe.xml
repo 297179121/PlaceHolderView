@@ -15,18 +15,21 @@
             android:id="@+id/rejectBtn"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:onClick="onRejectClick"
             android:background="@drawable/ic_cancel"/>
         <ImageButton
             android:id="@+id/acceptBtn"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="30dp"
+            android:onClick="onAcceptClick"
             android:background="@drawable/ic_heart"/>
         <ImageButton
             android:id="@+id/undoBtn"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="30dp"
+            android:onClick="onUndoClick"
             android:background="@drawable/ic_book_black_18dp"/>
     </LinearLayout>
     <com.mindorks.placeholderview.SwipePlaceHolderView
